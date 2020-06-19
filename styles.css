@@ -1,0 +1,164 @@
+html{
+    font-family: "Karla", sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+    background-color: hsl(204, 43%, 93%);
+    display: grid;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    max-width: 30rem;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem 2rem .5rem #ccc;
+}
+
+.join, .subscription, .whyus{
+    padding: 2rem;
+}
+
+.join {
+    background-color: white;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.join .heading{
+    margin: 1rem 0 1.5rem 0;
+    color: hsl(179, 62%, 43%);
+    font-size: 2rem;
+}
+
+.join .sub-heading{
+    font-size: 1.3rem;
+    color: hsl(71, 73%, 54%);
+}
+
+.join .content{
+    color: hsl(218, 22%, 67%);
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.subscription{
+    background-color: hsl(179, 62%, 43%);
+}
+
+.subscription .heading{
+    color: white;
+    margin: 1rem 0 1.5rem 0;
+    font-size: 2rem;
+}
+
+.subscription .sub-heading{
+    color: #ddd;
+    font-size: 1.5rem;
+}
+
+.subscription .price{
+    color: white;
+    font-size: 4rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+.subscription .content{
+    color: #eee;
+    font-size: 1.4rem;
+}
+
+.sign-up-btn{
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    transition: all .4s;
+    box-shadow: .3rem .3rem 1rem #777;
+}
+
+.sign-up-btn:hover{
+    background-color: white;
+    color: hsl(71, 81%, 15%);
+}
+
+.whyus{
+    background-color: hsla(179.1, 57.1%, 46.7%, 0.73);
+    color: white;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.whyus .heading{
+    font-size: 2rem;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.whyus .features-list{
+    list-style: none;
+    padding: 0;
+}
+
+.whyus .feature{
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+
+@media (min-width: 700px){
+    body{
+        height: 100vh;
+        align-content: center;
+    }
+
+    .container{
+        max-width: 60rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "join   join"
+            "subscr whyus";
+        
+    }
+    .join{
+        grid-area: join;
+    }
+
+    .subscription{
+        grid-area: subscr;
+        border-bottom-left-radius: .5rem;
+    }
+
+    .whyus{
+        grid-area: whyus;
+        border-bottom-left-radius: 0;
+    }
+
+    .join, .subscription, .whyus{
+        padding: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
